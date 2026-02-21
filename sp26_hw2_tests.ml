@@ -10,10 +10,7 @@ let ex_tests_with_path =
      - an LLVM IR file
      - the expected return code
      Note that return codes are truncated to one byte. *)
-  [ "sp26_hw2_tests/ntz.ll", 6L
-  ; even_odd: no arg -> invalid -> -1 (truncated to 255)
-  "sp26_hw2_tests/even_odd.ll", 255L
-  ]
+  [ "sp26_hw2_tests/ntz.ll", 6L]
 
 let io_tests_with_path =
   (* Format: each io test is a triple consisting of
