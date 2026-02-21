@@ -427,7 +427,10 @@ levelMain:
     %28 = getelementptr %Node, %Node* %25, i32 0, i32 2
     %29 = load %Node*, %Node** %28
     store %Node* %29, %Node** %head
-    ; Again, ideally we would free old here.
+
+    %oldCast = bitcast %Node* %old to i8*
+    call void @free(i8* %oldCast)
+
     %30 = load i64, i64* %levels
     %31 = sub i64 %30, 1
     store i64 %31, i64* %levels
