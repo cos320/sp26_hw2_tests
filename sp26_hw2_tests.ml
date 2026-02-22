@@ -49,4 +49,10 @@ let io_tests_with_path =
     "sp26_hw2_tests/even_odd.ll", ["4"], "0";
     "sp26_hw2_tests/even_odd.ll", ["5"], "1";
     "sp26_hw2_tests/even_odd.ll", ["100"], "0";
+
+    (* Ayush's tests *)
+    "sp26_hw2_tests/fenwick.ll", ["1"; "2"; "3"; "0"; "2"], "6";
+    "sp26_hw2_tests/fenwick.ll", ["10"; "23"; "43"; "78"; "292"; "2"; "21"; "34"; "2"; "6"], "436";
+    "sp26_hw2_tests/fenwick.ll", ["10"; "10"; "10"; "10"; "1"; "2"], "20";
+    "sp26_hw2_tests/fenwick.ll", ["-1"; "-2"; "0"; "1"], "-3";
   ]
