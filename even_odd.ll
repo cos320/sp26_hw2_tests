@@ -12,8 +12,8 @@ define i64 @is_even(i64 %n) {
 is_even:
   ret i64 0
 recurse_odd:
-  %n = sub i64 %n, 1
-  %parity = call i64 @is_odd(i64 %n)
+  %r = sub i64 %n, 1
+  %parity = call i64 @is_odd(i64 %r)
   ret i64 %parity
 }
 
@@ -23,8 +23,8 @@ define i64 @is_odd(i64 %n) {
 is_odd:
   ret i64 1
 recurse_even:
-  %n = sub i64 %n, 1
-  %parity = call i64 @is_even(i64 %n)
+  %r = sub i64 %n, 1
+  %parity = call i64 @is_even(i64 %r)
   ret i64 %parity
 }
 
@@ -42,7 +42,7 @@ process_arg:
   %negative = icmp slt i64 %n, 0
   br i1 %negative, label %invalid, label %valid
 valid:
-  %parity = call i64 @is_odd(i64 %n)
+  %parity = call i64 @is_even(i64 %n)
   %parity_str = call i8* @ll_ltoa(i64 %parity)
   call void @ll_puts(i8* %parity_str)
   ret i64 %parity
