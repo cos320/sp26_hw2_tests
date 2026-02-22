@@ -128,5 +128,5 @@ build_end:
     %ans_string = call i8* @ll_ltoa(i64 %ans)
     call void @ll_puts(i8* %ans_string)
 
-    ret i64 %ans
+    ret i64 0
 }
