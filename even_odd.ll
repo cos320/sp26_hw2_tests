@@ -1,6 +1,8 @@
 ; determine parity of input number with mutual recursion
-; expects one non-negative integer as input
-; return 1 for odd, 0 for even; -1 for invalid argument (no argument or negative)
+; expects an index 0 through 6 as input
+; return 1 for odd, 0 for even; -1 for invalid argument
+
+@nums = global [7 x i64] [i64 0, i64 1, i64 2, i64 4, i64 5, i64 7, i64 50]
 
 declare i64 @atoi(i8*)
 declare i8* @ll_ltoa(i64)
@@ -38,10 +40,15 @@ invalid:
 process_arg:
   %arg_ptr = getelementptr i8*, i8** %argv, i64 1
   %arg = load i8*, i8** %arg_ptr
-  %n = call i64 @atoi(i8* %arg)
-  %negative = icmp slt i64 %n, 0
-  br i1 %negative, label %invalid, label %valid
+  %index = call i64 @atoi(i8* %arg)
+  ; index must be within bounds [0, 6] of nums global array
+  %index_neg = icmp slt i64 %index, 0
+  %index_large = icmp sge i64 %index, 7
+  %out_of_bounds = or i1 %index_neg, %index_large
+  br i1 %out_of_bounds, label %invalid, label %valid
 valid:
+  %val_ptr = getelementptr [7 x i64], [7 x i64]* @nums, i64 0, i64 %index
+  %n = load i64, i64* %val_ptr
   %parity = call i64 @is_even(i64 %n)
   %parity_str = call i8* @ll_ltoa(i64 %parity)
   call void @ll_puts(i8* %parity_str)

@@ -41,14 +41,14 @@ let io_tests_with_path =
     "sp26_hw2_tests/skip_list.ll", ["1000000"], "success!";
 
     (* Will Grace tests *)
-    "sp26_hw2_tests/even_odd.ll", [], "-1";
     "sp26_hw2_tests/even_odd.ll", ["-18"], "-1";
     "sp26_hw2_tests/even_odd.ll", ["0"], "0";
     "sp26_hw2_tests/even_odd.ll", ["1"], "1";
     "sp26_hw2_tests/even_odd.ll", ["2"], "0";
-    "sp26_hw2_tests/even_odd.ll", ["4"], "0";
+    "sp26_hw2_tests/even_odd.ll", ["3"], "0";
+    "sp26_hw2_tests/even_odd.ll", ["4"], "1";
     "sp26_hw2_tests/even_odd.ll", ["5"], "1";
-    "sp26_hw2_tests/even_odd.ll", ["100"], "0";
+    "sp26_hw2_tests/even_odd.ll", ["6"], "0";
 
     (* Ayush's tests *)
     "sp26_hw2_tests/fenwick.ll", ["1"; "2"; "3"; "0"; "2"], "6";
