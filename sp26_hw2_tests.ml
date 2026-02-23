@@ -134,4 +134,13 @@ let io_tests_with_path =
     "sp26_hw2_tests/pascal.ll", ["2"], "4";
     "sp26_hw2_tests/pascal.ll", ["7"], "128";
     "sp26_hw2_tests/pascal.ll", ["10"], "1024";
+
+    (* Richard and John's Tests *)
+    "sp26_hw2_tests/find_all_divisors.ll", ["1"], "1";
+    "sp26_hw2_tests/find_all_divisors.ll", ["2"], "1\n2";
+    "sp26_hw2_tests/find_all_divisors.ll", ["10"], "1\n2\n5\n10";
+    "sp26_hw2_tests/find_all_divisors.ll", ["97"], "1\n97";
+    "sp26_hw2_tests/find_all_divisors.ll", ["48"], "1\n2\n3\n4\n6\n8\n12\n16\n24\n48";
+    "sp26_hw2_tests/find_all_divisors.ll", ["360"], "1\n2\n3\n4\n5\n6\n8\n9\n10\n12";
+
   ]
