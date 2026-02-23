@@ -127,4 +127,11 @@ let io_tests_with_path =
     "sp26_hw2_tests/uf.ll",
       ["0"; "1"; "1"; "2"; "2"; "3"; "3"; "4"; "4"; "5"; "5"; "6"; "6"; "7"],
     "0\n0\n0\n0\n0\n0\n0\n0";
+    
+    (* Hita's tests *)
+    "sp26_hw2_tests/pascal.ll", ["0"], "1";
+    "sp26_hw2_tests/pascal.ll", ["1"], "2";
+    "sp26_hw2_tests/pascal.ll", ["2"], "4";
+    "sp26_hw2_tests/pascal.ll", ["7"], "128";
+    "sp26_hw2_tests/pascal.ll", ["10"], "1024";
   ]
