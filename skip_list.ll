@@ -1,3 +1,7 @@
+; Authors: Ben Aepli and Vedant Badoni
+; Provides an implementation of a skip list.
+; Tests by inserting a lot of integers and then removing them.
+
 %Node = type {
     i8*, ; data
     %Node*, ; next
