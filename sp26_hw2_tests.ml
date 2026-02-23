@@ -113,4 +113,18 @@ let io_tests_with_path =
     "sp26_hw2_tests/pda.ll", [ "0"; "1"; "0"; "0"; "1"; "0"; "0"; "1"; "1"; "1" ], "accept";
     (* ())(() *)
     "sp26_hw2_tests/pda.ll", [ "0"; "1"; "1"; "0"; "0"; "1" ], "reject"
+
+    (* Jishnu Colin tests *)
+
+    "sp26_hw2_tests/uf.ll", [], "0\n1\n2\n3\n4\n5\n6\n7";
+    "sp26_hw2_tests/uf.ll", ["0"], "pairs of elements please!";
+    "sp26_hw2_tests/uf.ll", ["0"; "1"; "2"; "3"], "0\n0\n2\n2\n4\n5\n6\n7";
+
+    "sp26_hw2_tests/uf.ll",
+      ["1"; "0"; "2"; "1"; "3"; "2"; "4"; "3"],
+    "4\n4\n4\n4\n4\n5\n6\n7";
+
+    "sp26_hw2_tests/uf.ll",
+      ["0"; "1"; "1"; "2"; "2"; "3"; "3"; "4"; "4"; "5"; "5"; "6"; "6"; "7"],
+    "0\n0\n0\n0\n0\n0\n0\n0";
   ]
