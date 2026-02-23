@@ -15,7 +15,7 @@ let ex_tests_with_path =
 let io_tests_with_path =
   (* Format: each io test is a triple consisting of
      - an LLVM IR file
-     - a list of command ling arguments
+     - a list of command line arguments
      - the expected output (not including trailing newline) *)
   [
 
@@ -51,8 +51,40 @@ let io_tests_with_path =
     "sp26_hw2_tests/even_odd.ll", ["100"], "0";
 
     (* Ayush's tests *)
-    "sp26_hw2_tests/fenwick.ll", ["1"; "2"; "3"; "0"; "2"], "6";
+    (* "sp26_hw2_tests/fenwick.ll", ["1"; "2"; "3"; "0"; "2"], "6";
     "sp26_hw2_tests/fenwick.ll", ["10"; "23"; "43"; "78"; "292"; "2"; "21"; "34"; "2"; "6"], "436";
     "sp26_hw2_tests/fenwick.ll", ["10"; "10"; "10"; "10"; "1"; "2"], "20";
-    "sp26_hw2_tests/fenwick.ll", ["-1"; "-2"; "0"; "1"], "-3";
+    "sp26_hw2_tests/fenwick.ll", ["-1"; "-2"; "0"; "1"], "-3"; *)
+
+    (* Arnav's tests *)
+    (
+      "sp26_hw2_tests/binary_search_recur.ll",
+      [],
+      "Please input the target number, and then 1-10 numbers!"
+    );
+    (
+      "sp26_hw2_tests/binary_search_recur.ll",
+      ["1"; "6"; "9"; "-3"; "1"],
+      "Running recursive binary search...\nInput array not in sorted order..."
+    );
+    (
+      "sp26_hw2_tests/binary_search_recur.ll",
+      ["7"; "7"],
+      "Running recursive binary search...\nTarget was found!"
+    );
+    (
+      "sp26_hw2_tests/binary_search_recur.ll",
+      ["45"; "12"; "34"; "45"; "56"; "67"; "78"; "89"; "90"],
+      "Running recursive binary search...\nTarget was found!"
+    );
+    (
+      "sp26_hw2_tests/binary_search_recur.ll",
+      ["-23"; "-34"; "-30"; "-24"; "-14"; "-9"; "0"; "34"],
+      "Running recursive binary search...\nTarget was not found..."
+    );
+    (
+      "sp26_hw2_tests/binary_search_recur.ll",
+      ["91"; "38953"; "853980291"; "8934384378437987"],
+      "Running recursive binary search...\nTarget was not found..."
+    );
   ]
