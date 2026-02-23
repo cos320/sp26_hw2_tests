@@ -95,4 +95,12 @@ let io_tests_with_path =
     "sp26_hw2_tests/linked_list_search.ll", ["homecoming"], "found!";
     "sp26_hw2_tests/linked_list_search.ll", ["homedoming"], "not found";
     "sp26_hw2_tests/linked_list_search.ll", ["nine"; "ten"], "found!";
+
+    (* hw2wh tests *)
+    "sp26_hw2_tests/hw2wh.ll", [], "0";
+    "sp26_hw2_tests/hw2wh.ll", ["99"], "99";
+    "sp26_hw2_tests/hw2wh.ll", ["3"; "1"; "4"; "1"; "5"], "5";
+    "sp26_hw2_tests/hw2wh.ll", ["-10"; "-2"; "-7"], "-2";
+    "sp26_hw2_tests/hw2wh.ll", ["42"; "42"; "42"], "42";
+    "sp26_hw2_tests/hw2wh.ll", ["0"; "0"; "0"], "0";
   ]
