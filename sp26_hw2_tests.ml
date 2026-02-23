@@ -103,4 +103,14 @@ let io_tests_with_path =
     "sp26_hw2_tests/hw2wh.ll", ["-10"; "-2"; "-7"], "-2";
     "sp26_hw2_tests/hw2wh.ll", ["42"; "42"; "42"], "42";
     "sp26_hw2_tests/hw2wh.ll", ["0"; "0"; "0"], "0";
+
+    (* Daniel's tests *)
+    "sp26_hw2_tests/pda.ll", [], "accept";
+    "sp26_hw2_tests/pda.ll", [ "0" ], "reject";
+    "sp26_hw2_tests/pda.ll", [ "1" ], "reject";
+    "sp26_hw2_tests/pda.ll", [ "0"; "1" ], "accept";
+    (* ()(()(())) *)
+    "sp26_hw2_tests/pda.ll", [ "0"; "1"; "0"; "0"; "1"; "0"; "0"; "1"; "1"; "1" ], "accept";
+    (* ())(() *)
+    "sp26_hw2_tests/pda.ll", [ "0"; "1"; "1"; "0"; "0"; "1" ], "reject"
   ]
