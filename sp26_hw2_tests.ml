@@ -87,4 +87,12 @@ let io_tests_with_path =
       ["91"; "38953"; "853980291"; "8934384378437987"],
       "Running recursive binary search...\nTarget was not found..."
     );
+    
+    (* Isaac Badipe tests *)
+    "sp26_hw2_tests/linked_list_search.ll", ["word"], "not found";
+    "sp26_hw2_tests/linked_list_search.ll", ["daybreak"], "found!";
+    "sp26_hw2_tests/linked_list_search.ll", ["seventeen"], "found!";
+    "sp26_hw2_tests/linked_list_search.ll", ["homecoming"], "found!";
+    "sp26_hw2_tests/linked_list_search.ll", ["homedoming"], "not found";
+    "sp26_hw2_tests/linked_list_search.ll", ["nine"; "ten"], "found!";
   ]
